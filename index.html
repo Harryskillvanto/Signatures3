@@ -33,4 +33,33 @@ const members = [
   { name: "Vishnu", email: "Vishnu@skillvanto.com", title: "Director of Business Development", phone: "307-216-6032" },
   { name: "Rick Jones", email: "Rick.jones@skillvanto.net", title: "Director of Business Development", phone: "307-216-6032" },
   { name: "Manisha Palli", email: "Manisha.palli@skillvanto.net", title: "Business Development Manager", phone: "307-216-6032" },
-  { name: "Ajay Reddy", email: "Ajay.reddy@skillvanto.ne
+  { name: "Ajay Reddy", email: "Ajay.reddy@skillvanto.net", title: "Director of Business Development", phone: "307-216-6032" },
+  { name: "Harry Williams", email: "Harry.williams@skillvanto.net", title: "Director of Business Development", phone: "307-216-6032" },
+  { name: "Grace Morgan", email: "Grace.morgan@skillvanto.net", title: "Business Development Manager", phone: "307-216-6032" },
+  { name: "Nathan Foster", email: "Nathan.foster@skillvanto.net", title: "Business Development Manager", phone: "307-216-6032" },
+  { name: "Madison Reed", email: "madison.reed@skillvanto.net", title: "Business Development Manager", phone: "307-216-6032" },
+  { name: "Max Henry", email: "Max.Henry@Skillvanto.com", title: "Business Development Manager", phone: "307-216-6032" }
+];
+members.forEach(m => {
+  const div = document.createElement('div');
+  div.className = 'member';
+  div.innerHTML = `
+    <div class="member-name-label">${m.name} — ${m.email}</div>
+    <div class="signature-box">
+      <table cellpadding="0" cellspacing="0" border="0" style="font-family:Arial,sans-serif;">
+        <tr><td style="font-size:14px;font-weight:bold;color:#1B6B7B;padding:0;line-height:1.3;">${m.name}</td></tr>
+        <tr><td style="font-size:11px;color:#666;padding:0;line-height:1.3;">${m.title}</td></tr>
+        <tr><td style="padding:4px 0 4px;"><hr style="border:none;border-top:1.5px solid #1B6B7B;opacity:0.4;margin:0;width:160px;"></td></tr>
+        <tr><td style="font-size:11px;color:#444;padding:0;line-height:1.6;"><span style="color:#1B6B7B;font-weight:bold;">P:</span> ${m.phone}</td></tr>
+        <tr><td style="font-size:11px;color:#444;padding:0;line-height:1.6;"><span style="color:#1B6B7B;font-weight:bold;">E:</span> <a href="mailto:${m.email}" style="color:#1B6B7B;font-weight:bold;text-decoration:none;">${m.email}</a></td></tr>
+        <tr><td style="font-size:11px;color:#444;padding:0;line-height:1.6;"><span style="color:#1B6B7B;font-weight:bold;">W:</span> <a href="https://www.skillvanto.com" style="color:#1B6B7B;font-weight:bold;text-decoration:none;">www.skillvanto.com</a></td></tr>
+        <tr><td style="font-size:11px;color:#444;padding:0;line-height:1.6;"><span style="color:#1B6B7B;font-weight:bold;">A:</span> 30 N Gould St Ste R, Sheridan, WY 82801</td></tr>
+      </table>
+    </div>
+    <p class="copy-hint">Select all inside the dashed box → Copy → Paste into Gmail signature</p>
+  `;
+  document.body.appendChild(div);
+});
+</script>
+</body>
+</html>
